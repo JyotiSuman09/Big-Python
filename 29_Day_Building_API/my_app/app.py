@@ -39,7 +39,7 @@ def students():
 
 
 # Connecting mongoDB
-MONGODB_URI = 'mongodb+srv://jyoti:W9E616uFrh84Cid1@cluster0.ma2mjpy.mongodb.net/'
+MONGODB_URI = os.environ.get('MONGODB_URI')
 client = pymongo.MongoClient(MONGODB_URI)
 db = client['thirty_days_of_python']
 
